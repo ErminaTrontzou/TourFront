@@ -14,11 +14,12 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - name: Use Node.js 17.x
+      - name: Use Node.js 15.x
         uses: actions/setup-node@v2
 
       - name: npm ci, build and test
         run: |
+          npm audit fix
           npm install --force
           npm ci
           npm run build --if-present
