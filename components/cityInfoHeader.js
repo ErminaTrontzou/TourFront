@@ -4,9 +4,9 @@ import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import IconButton from '@mui/material/IconButton';
 import InfoIcon from '@mui/icons-material/Info';
-import "../style/Home.css";
 import {Tooltip} from "@mui/material";
 import VisibilityIcon from '@mui/icons-material/Visibility';
+import Link from "next/link";
 
 function CityInfoHeader({cityData, cityProp}) {
 
@@ -41,13 +41,15 @@ function CityInfoHeader({cityData, cityProp}) {
                                             <Tooltip title={"Total Views: " + cityObj.views} placement="top" arrow>
                                                 <VisibilityIcon style={{marginRight: "10px"}}/>
                                             </Tooltip>
-                                            <InfoIcon/>
+                                            <Link href={"/image/" + cityObj.id}>
+                                                <InfoIcon/>
+                                            </Link>
                                         </IconButton>
                                     }
                                 />
                             </ImageListItem>
                         </>
-                )
+                    )
                 })}
             </ImageList>
         </>
