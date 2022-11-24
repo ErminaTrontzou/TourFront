@@ -19,8 +19,8 @@ jobs:
 
       - name: npm ci, build and test
         run: |
-          npm install react-i18next i18next --save
           npm config set legacy-peer-deps true
+          npm install react-i18next i18next --save
           npm install --force
           npm audit fix
           npm ci
