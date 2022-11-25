@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test": "jest"
   },
   "dependencies": {
     "@emotion/react": "^11.9.0",
@@ -51,8 +52,5 @@
     "fs": false,
     "path": false,
     "os": false
-  },
-  "script": {
-  "test": "jest"
   }
 }
