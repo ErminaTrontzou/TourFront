@@ -51,7 +51,7 @@
     "fs": false,
     "path": false,
     "os": false
-  }
+  },
   "script": {
   "test": "jest"
   }
