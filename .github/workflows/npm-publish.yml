@@ -2,7 +2,9 @@ name: Deploy React Application
 
 on:
   push:
-
+    tags:
+      - "v*"
+      
 jobs:
   build_test:
     runs-on: ubuntu-latest
