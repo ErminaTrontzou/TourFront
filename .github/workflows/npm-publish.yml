@@ -19,7 +19,7 @@ jobs:
           npm install --force
           npm ci --ignore-scripts
           npm run build 
-          ls
+          tree build /F
           
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
