@@ -20,7 +20,7 @@ jobs:
       - name: npm ci, build and test
         run: |
           npm config set legacy-peer-deps true
-
+          npm i i18next i18next-http-backend i18next-browser-languagedetector react-i18next --save 
           npm install --force
           npm rm -g create-react-app
           npm install -g create-react-app
