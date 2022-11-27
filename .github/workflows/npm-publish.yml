@@ -20,17 +20,13 @@ jobs:
       - name: npm ci, build and test
         run: |
           npm config set legacy-peer-deps true
-          npm audit fix
-          npm install react-i18next i18next --save
-          npm install babel-core@7.0.0-bridge.0 --save-dev
-          npm install -g jest
+
           npm install --force
           npm rm -g create-react-app
           npm install -g create-react-app
           npx create-react-app my-app
-          npm ci
+          npm ci --ignore-scripts
           npm run build --if-present
-          npm test      
       - name: deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
