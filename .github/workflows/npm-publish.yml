@@ -22,6 +22,7 @@ jobs:
           npm config set legacy-peer-deps true
           npm audit fix
           npm install react-i18next i18next --save
+          npm install babel-core@7.0.0-bridge.0 --save-dev
           npm install -g jest
           npm install --force
           npm rm -g create-react-app
