@@ -1,35 +1,24 @@
 name: Deploy React Application
 
-# Controls when the action will run. 
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
   push:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   build_test:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       - name: Use Node.js 15.x
         uses: actions/setup-node@v2
 
       - name: Install
         run: |
-          npm config set legacy-peer-deps true
-          npm i i18next i18next-http-backend i18next-browser-languagedetector react-i18next --save 
-          npm install --force
-          npm rm -g create-react-app
-          npm install -g create-react-app
-          npx create-react-app my-app
           npm ci --ignore-scripts
           npm run build 
           
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          github_token: ${{ secrets.REPO_TOKEN }}
-          publish_dir: public
+          folder: build
+          branch: gh-pages
