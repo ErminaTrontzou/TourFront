@@ -19,10 +19,8 @@ jobs:
           npm config set legacy-peer-deps true
           npm i i18next i18next-http-backend i18next-browser-languagedetector react-i18next --save 
           npm install --force
-          npm install gh-pages --save-dev
           npm ci --ignore-scripts
-          npm run build
-          
+          npm run build 
           
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
