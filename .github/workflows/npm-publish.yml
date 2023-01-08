@@ -21,9 +21,6 @@ jobs:
           npm install --force
           npm ci --ignore-scripts
           npm run build 
+          npm run deploy
           
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          folder: .next/server/pages
-          branch: gh-pages
+
