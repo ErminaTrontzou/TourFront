@@ -6,9 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test": "jest",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d .next/server/pages"
+    "test": "jest"
   },
   "dependencies": {
     "@emotion/react": "^11.9.0",
