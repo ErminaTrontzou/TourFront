@@ -22,7 +22,7 @@ jobs:
           npm install gh-pages --save-dev
           npm ci --ignore-scripts
           git config --global user.email "admin@gmail.com"
-          git config --global user.name "admin"
+          git config --global user.name "ErminaTrontzou"
           npm run build 
           npm run deploy
           
