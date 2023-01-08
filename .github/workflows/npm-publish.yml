@@ -13,10 +13,11 @@ jobs:
       - uses: actions/checkout@v2
       - name: Use Node.js 15.x
         uses: actions/setup-node@v2
+        with:
+              git-config-name: ErminaTrontzou
+              git-config-email: 7erminatrontzou7@gmail.com
 
       - name: Install
-        env:
-          GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
         run: |
           npm config set legacy-peer-deps true
           npm i i18next i18next-http-backend i18next-browser-languagedetector react-i18next --save 
