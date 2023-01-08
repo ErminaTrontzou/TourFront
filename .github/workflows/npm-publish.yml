@@ -21,7 +21,6 @@ jobs:
           npm install --force
           npm install gh-pages --save-dev
           npm ci --ignore-scripts
-          npm run build
           npm run deploy
           
           
