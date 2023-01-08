@@ -21,6 +21,8 @@ jobs:
           npm install --force
           npm install gh-pages --save-dev
           npm ci --ignore-scripts
+          git config --global user.email "admin@gmail.com"
+          git config --global user.name "admin"
           npm run build 
           npm run deploy
           
